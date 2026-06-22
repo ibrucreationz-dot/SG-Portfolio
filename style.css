@@ -1,0 +1,92 @@
+/* Importing Tilt Neon font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+body {
+  margin: 0;
+  /* Changed font to Tilt Neon */
+  font-family: 'Tilt Neon', sans-serif;
+  
+  /* Colorful animated gradient background */
+  background: linear-gradient(135deg, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Animation keyframes for the moving background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  /* 3D shadow effect for the text */
+  text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4);
+  font-weight: normal; /* Normal weight is best for Tilt Neon */
+  letter-spacing: 2px; /* Adding a little spacing makes this font look even better */
+}
+
+iframe {
+  border-radius: 15px;
+  margin-top: 20px;
+  /* A subtle border and shadow around the video/iframe */
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Container to align cards side-by-side perfectly */
+.card-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  /* Glassmorphism effect (frosted glass look) */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  
+  padding: 40px 20px;
+  border-radius: 20px;
+  width: 220px;
+  color: #fff;
+  cursor: pointer;
+  
+  /* Outer and inner shadows for a 3D feel */
+  box-shadow: 
+    10px 10px 30px rgba(0, 0, 0, 0.4), 
+    inset 2px 2px 5px rgba(255, 255, 255, 0.2);
+    
+  /* Smooth bouncy transition for the hover effect */
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  /* 3D pop-up and slight tilt effect on hover */
+  transform: translateY(-15px) scale(1.05) rotateX(5deg) rotateY(-5deg);
+  background: rgba(255, 255, 255, 0.2);
+  
+  /* Glowing 3D shadow effect */
+  box-shadow: 
+    15px 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(255, 181, 107, 0.6), 
+    inset 2px 2px 5px rgba(255, 255, 255, 0.4);
+}
