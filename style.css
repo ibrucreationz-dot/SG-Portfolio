@@ -1,6 +1,7 @@
 /* --- Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800;900&display=swap');
+/* Added 400 weight to make the font lighter for the subtitle */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800;900&display=swap');
 
 /* --- 1. Mind-Blowing Entry Animation --- */
 body {
@@ -60,7 +61,7 @@ section {
   padding: 40px 20px;
 }
 
-/* --- 4. Split Home Section (Left: Logo, Right: Text) --- */
+/* --- 4. Split Home Section (Left: 3D Logo, Right: Text) --- */
 .split-home {
   display: flex;
   flex-direction: row;
@@ -99,7 +100,7 @@ section {
   text-align: left;
 }
 
-/* Huge Gradient Text (Orbitron Font) */
+/* Pure White Text (Orbitron Font) */
 .home-right h1 {
   font-family: 'Orbitron', sans-serif;
   font-weight: 900;
@@ -108,29 +109,39 @@ section {
   margin: 0;
   line-height: 1.2;
   text-align: left;
-  
-  /* Pink to Deep Purple to Cyan Gradient */
-  background: linear-gradient(to right, #ff007f, #7000ff, #00d4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
+  color: #ffffff; 
   animation: floatText 4s ease-in-out infinite;
-  text-shadow: 0px 15px 40px rgba(255, 255, 255, 0.1);
+  text-shadow: 0px 15px 40px rgba(255, 255, 255, 0.2);
 }
 
-/* Mobile Responsive Setup for Home Section */
+/* Splatter Graphics Subtitle (White, Lighter, Smaller) */
+.brand-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.4rem); /* Reduced size */
+  font-weight: 400; /* Made the font lighter */
+  color: #ffffff; /* Pure white color */
+  opacity: 0.8; /* Slight transparency for a softer look */
+  margin-top: 15px;
+  margin-bottom: 0;
+  letter-spacing: 3px;
+  text-align: left;
+  animation: floatText 4s ease-in-out infinite;
+  animation-delay: 0.3s; 
+}
+
+/* Mobile Responsive Setup */
 @media (max-width: 900px) {
   .split-home {
-    flex-direction: column-reverse; /* Puts text on top, logo on bottom for phones */
+    flex-direction: column-reverse; 
     text-align: center;
     padding-top: 100px;
   }
   .home-right {
     align-items: center;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
-  .home-right h1 {
+  .home-right h1, .brand-name {
     text-align: center;
   }
   .home-left iframe {
