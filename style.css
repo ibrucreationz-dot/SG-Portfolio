@@ -85,6 +85,19 @@ p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; color: rgba(255, 2
 #about h2 { font-family: 'Alex Brush', cursive; font-size: clamp(3.5rem, 8vw, 6rem); letter-spacing: 1px; text-shadow: 0 0 20px rgba(255, 255, 255, 0.15); margin-bottom: 20px; }
 #about p { font-size: clamp(1.4rem, 3vw, 1.7rem); max-width: 750px; line-height: 1.6; color: rgba(255, 255, 255, 0.9); }
 
+.about-card {
+  background: rgba(255, 255, 255, 0.1); /* Glass color */
+  backdrop-filter: blur(15px);           /* Blur effect */
+  -webkit-backdrop-filter: blur(15px);   
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;                   /* Corner round aakkan */
+  padding: 40px;
+  max-width: 700px;
+  margin: 20px auto;                     /* Center aakkan */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  text-align: center;
+}
+
 /* --- 4. PUZZLE CARDS STYLING --- */
 .card-container { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; margin-top: 40px; perspective: 1000px; }
 .card {
@@ -116,6 +129,13 @@ p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; color: rgba(255, 2
 }
 .info-item { background: rgba(0, 0, 0, 0.3); padding: 15px 20px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; gap: 15px; }
 .info-item a { color: #00f2fe; text-decoration: none; font-weight: bold; }
+.input-group {
+    transition: transform 0.3s ease;
+}
+
+.input-group:hover {
+    transform: translateY(-10px);
+}
 .input-group input, .input-group textarea { width: 100%; padding: 18px; background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; color: #fff; font-size: 1rem; box-sizing: border-box; }
 .submit-btn { background: linear-gradient(45deg, #00f2fe, #4facfe); color: #000; font-family: 'Orbitron', sans-serif; font-weight: 900; padding: 18px; border: none; border-radius: 15px; cursor: pointer; text-transform: uppercase; }
 
