@@ -9,7 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 2. PUZZLE HOVER EFFECT & 3D TILT ---
+    // --- 2. HAMBURGER MENU TOGGLE ---
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");   // menu slide in/out
+      hamburger.classList.toggle("open");    // icon ☰ → ✖ animation
+    });
+
+    // --- 2B. AUTO-CLOSE MENU WHEN LINK CLICKED ---
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("open");
+      });
+    });
+
+    // --- 3. PUZZLE HOVER EFFECT & 3D TILT ---
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         const glowColor = card.getAttribute('data-color');
@@ -67,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 3. FORM SUBMISSION ANIMATION ---
+    // --- 4. FORM SUBMISSION ANIMATION ---
     const contactForm = document.querySelector('.contact-form');
     if(contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -86,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 4. SCROLL ANIMATIONS (GSAP) ---
+    // --- 5. SCROLL ANIMATIONS (GSAP) ---
     gsap.registerPlugin(ScrollTrigger);
 
     // Navbar reveal

@@ -21,16 +21,107 @@ body {
   100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
 }
 
-/* --- New: Navbar Styling --- */
+/* --- Navbar Styling --- */
 .navbar { 
-  position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; 
-  align-items: center; padding: 20px 5%; z-index: 1000; 
-  background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px); box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  z-index: 9999;   /* 👈 high z-index so icon visible */
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
 }
-.navbar .logo { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 900; }
-.navbar ul { display: flex; list-style: none; gap: 30px; margin: 0; padding: 0; }
-.navbar a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
-.navbar a:hover { color: #00f2fe; }
+.navbar .logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.navbar a:hover {
+  color: #00f2fe;
+}
+.navbar a.active {
+  color: #00f2fe;
+  border-bottom: 2px solid #00f2fe;
+}
+
+/* --- Hamburger Icon --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* --- Hamburger Animation (☰ → ✖) --- */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* --- Mobile View --- */
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    transition: right 0.3s ease;
+  }
+  .nav-links.active {
+    right: 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+}
+.hamburger span {
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
 
 /* --- 2. FULL SCREEN FLUID MESH BACKGROUND --- */
 .mesh-bg {
