@@ -9,11 +9,11 @@
 }
 
 body {
-  margin: 0; !important;
+  margin: 0;
   font-family: 'Tilt Neon', sans-serif;
   background-color: #030712; 
   color: #ffffff;
-  overflow-x: hidden; !important;
+  overflow-x: hidden;
 }
 
 .main-wrapper {
