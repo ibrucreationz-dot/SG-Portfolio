@@ -3,32 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
 
-/* --- 1. Global Reset (Important for Mobile) --- */
+/* --- 1. Base Styles --- */
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* ഇത് സ്ക്രീൻ വശങ്ങളിലേക്ക് തള്ളുന്നത് തടയും */
+body {
+  margin: 0; !important;
   font-family: 'Tilt Neon', sans-serif;
   background-color: #030712; 
   color: #ffffff;
+  overflow-x: hidden; !important;
 }
 
-/* --- Rest of your original CSS styles --- */
-/* (നിങ്ങളുടെ ബാക്കി സ്റ്റൈലുകൾ ഇവിടെ താഴെ കൊടുക്കുക) */
-
-/* --- Mobile Fixes (Must be at the bottom) --- */
-@media (max-width: 768px) {
-  .split-home { flex-direction: column-reverse; padding-top: 100px; }
-  .home-left iframe { width: 95vw !important; height: 300px !important; }
-  .contact-wrapper { flex-direction: column; padding: 0 15px; }
-  .contact-box { width: 100% !important; min-width: auto; }
-  .card { width: 90vw !important; }
-}
 .main-wrapper {
   animation: pageReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
