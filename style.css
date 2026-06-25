@@ -259,6 +259,21 @@ p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; color: rgba(255, 2
     </form>
   </div>
 </section>
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* സ്ക്രീൻ ചെറുതായാൽ ഇത് താഴേക്ക് വരാൻ സഹായിക്കും */
+}
+
+.contact-form, .contact-info {
+  flex: 1;
+  min-width: 320px;
+}
 .input-group:hover {
     transform: translateY(-10px);
 
