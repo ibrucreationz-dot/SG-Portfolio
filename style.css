@@ -21,11 +21,11 @@ body {
   100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
 }
 
-/* --- Navbar Styling --- */
+/* --- Navbar (Menu Right Side) --- */
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -94,6 +94,58 @@ body {
   }
   .hamburger.open span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+/* --- Updated Navbar (Menu Right Side) --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  z-index: 9999;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-left: auto; /* മെനു ലിങ്കുകൾ വലതുവശത്തേക്ക് നീക്കാൻ */
+}
+
+.nav-links a {
+  color: #ffffff !important; /* ലിങ്കുകൾ വൈറ്റ് കളർ ആക്കാൻ */
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* --- Mobile View (White Background) --- */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #ffffff !important; /* മൊബൈലിൽ വൈറ്റ് ബാക്ക്ഗ്രൗണ്ട് */
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    transition: 0.4s;
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    color: #000000 !important; /* വൈറ്റ് ബാക്ക്ഗ്രൗണ്ടിൽ ബ്ലാക്ക് ടെക്സ്റ്റ് */
   }
 }
 /* --- 2. FULL SCREEN FLUID MESH BACKGROUND --- */
@@ -209,46 +261,7 @@ p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; color: rgba(255, 2
 </section>
 .input-group:hover {
     transform: translateY(-10px);
-/* Contact Section Layout */
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
 
-/* ഇടത് ഭാഗത്തെ ഫോം */
-.contact-form {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 30px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* വലത് ഭാഗത്തെ കോൺടാക്റ്റ് വിവരങ്ങൾ */
-.contact-info {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 30px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-}
-
-/* മൊബൈൽ ഡിസൈൻ (ഒന്നിന് താഴെ ഒന്നായി വരാൻ) */
-@media (max-width: 768px) {
-  .contact-wrapper {
-    flex-direction: column;
-  }
-}
 }
 .input-group input, .input-group textarea { width: 100%; padding: 18px; background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; color: #fff; font-size: 1rem; box-sizing: border-box; }
 .submit-btn { background: linear-gradient(45deg, #00f2fe, #4facfe); color: #000; font-family: 'Orbitron', sans-serif; font-weight: 900; padding: 18px; border: none; border-radius: 15px; cursor: pointer; text-transform: uppercase; }
