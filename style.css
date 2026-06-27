@@ -237,9 +237,7 @@ p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; color: rgba(255, 2
 .card:hover::before { width: 125%; height: 125%; opacity: 0.9; filter: blur(55px); }
 
 /* --- 5. Contact Box & Form --- */
-<section id="contact">
-  <h2>Contact Me</h2>
-  <div class="contact-wrapper">
+<se-er">
     <!-- Left Side: Information -->
     <div class="contact-info">
       <div class="info-item">Email: <a href="mailto:ibru93874@gmail.com">ibru93874@gmail.com</a></div>
@@ -271,7 +269,7 @@ p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; color: rgba(255, 2
 }
 
 .contact-form, .contact-info {
-  flex: 1;
+  flex: 0 0 45;
   min-width: 320px;
 }
 .input-group:hover {
