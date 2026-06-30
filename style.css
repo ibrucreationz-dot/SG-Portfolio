@@ -249,7 +249,7 @@ p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; color: rgba(255, 2
 }
 
 .contact-form, .contact-info {
-  flex: 0 0 45%; /* ഇവിടെ % കൃത്യമായി ചേർത്തു */
+  flex: 0 0 45%; /* ശ്രദ്ധിക്കുക: ഇവിടെ 45 കഴിഞ്ഞാൽ % ചിഹ്നം നിർബന്ധമാണ് */
   min-width: 320px;
 }
 
