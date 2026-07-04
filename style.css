@@ -253,6 +253,7 @@ p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; color: rgba(255, 2
   min-width: 320px;
 }
 
+
 .input-group { 
   margin-bottom: 15px;
   transition: transform 0.3s ease; 
