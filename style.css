@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Orbitron:wght@400;800;900&display=swap');
+
+/* Header-ന് Orbitron, ബാക്കിയെല്ലാം Inter */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, .navbar .logo, .brand-name, .submit-btn {
+  font-family: 'Orbitron', sans-serif;
+}
 
 /* --- 1. Base Styles --- */
 body {
@@ -216,6 +226,16 @@ p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; color: rgba(255, 2
 
 /* --- 4. PUZZLE CARDS STYLING --- */
 .card-container { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; margin-top: 40px; perspective: 1000px; }
+/* Card link styling */
+.card-link {
+  text-decoration: none;
+  display: block;
+}
+
+/* ഹോവർ ചെയ്യുമ്പോൾ ലിങ്ക് ഒരു ബട്ടൺ പോലെ വർക്ക് ചെയ്യാൻ */
+.card-link:hover {
+  cursor: pointer;
+}
 .card {
   position: relative; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.2); border-left: 1px solid rgba(255, 255, 255, 0.2);
