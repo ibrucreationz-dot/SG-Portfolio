@@ -1099,7 +1099,7 @@ section h2 {
   display: grid;
 
   grid-template-columns:
-    repeat(4, 1fr);
+    repeat(3, 1fr);
 
   gap: 25px;
 
@@ -1770,4 +1770,20 @@ footer {
         transform: none;
         transition: none;
     }
+}
+
+@media (max-width: 900px) {
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
 }
