@@ -2277,3 +2277,18 @@ footer {
     }
 
 }
+
+/* =========================================================
+   MOBILE VISIBILITY FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .scroll-reveal,
+    .scroll-reveal-card {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+
+}
