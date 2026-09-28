@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- GitHub Pages refresh test -->
+    <!-- GitHub Pages refresh test -->
 
     <title>T-Shirt Designs | Splatter Graphics</title>
 
@@ -38,8 +38,6 @@
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
         }
-
-        /* HEADER */
 
         header {
             width: 100%;
@@ -83,8 +81,6 @@
             box-shadow: 0 0 25px rgba(66, 217, 255, 0.35);
         }
 
-        /* HERO */
-
         .hero {
             text-align: center;
             padding: 90px 20px 60px;
@@ -118,12 +114,9 @@
             font-size: 1rem;
         }
 
-        /* GALLERY */
-
         .gallery {
             width: min(1400px, 90%);
             margin: 0 auto 100px;
-
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 28px;
@@ -140,9 +133,7 @@
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 18px;
             padding: 10px;
-
             overflow: hidden;
-
             cursor: pointer;
 
             opacity: 0;
@@ -201,13 +192,10 @@
         .view-overlay {
             position: absolute;
             inset: 0;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             background: rgba(0,0,0,0.35);
-
             opacity: 0;
             transition: 0.3s ease;
         }
@@ -244,25 +232,17 @@
             font-weight: 600;
         }
 
-        /* MODAL */
-
         .modal {
             position: fixed;
             inset: 0;
-
             background: rgba(0,0,0,0.88);
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             padding: 30px;
-
             opacity: 0;
             visibility: hidden;
-
             transition: 0.3s ease;
-
             z-index: 100;
         }
 
@@ -276,7 +256,6 @@
             max-width: 600px;
             max-height: 92vh;
             width: 100%;
-
             display: flex;
             justify-content: center;
         }
@@ -286,9 +265,7 @@
             max-height: 88vh;
             width: auto;
             height: auto;
-
             object-fit: contain;
-
             border-radius: 14px;
             box-shadow: 0 25px 80px rgba(0,0,0,0.7);
         }
@@ -297,19 +274,14 @@
             position: fixed;
             top: 25px;
             right: 30px;
-
             width: 45px;
             height: 45px;
-
             border: 1px solid rgba(255,255,255,0.25);
             border-radius: 50%;
-
             background: rgba(10,18,34,0.9);
             color: white;
-
             font-size: 1.5rem;
             cursor: pointer;
-
             z-index: 110;
         }
 
@@ -317,8 +289,6 @@
             background: var(--blue);
             color: #03101b;
         }
-
-        /* FOOTER */
 
         footer {
             text-align: center;
@@ -332,16 +302,12 @@
             color: var(--blue);
         }
 
-        /* TABLET */
-
         @media (max-width: 900px) {
             .gallery {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
         }
-
-        /* MOBILE */
 
         @media (max-width: 600px) {
 
@@ -422,7 +388,6 @@
     </a>
 </header>
 
-
 <section class="hero">
 
     <div class="small-label">
@@ -440,14 +405,12 @@
 
 </section>
 
-
 <main class="gallery">
-
 
     <!-- 01 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="nagavally.png.png" alt="Nagavalli T-Shirt Design">
+            <img src="../T-Shirts/nagavally.png.png" alt="Nagavalli T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -458,11 +421,10 @@
         </div>
     </div>
 
-
     <!-- 02 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="onam.png.png" alt="Onam T-Shirt Design">
+            <img src="../T-Shirts/onam.png.png" alt="Onam T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -473,11 +435,10 @@
         </div>
     </div>
 
-
     <!-- 03 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="cruzados.png.png" alt="Cruzados T-Shirt Design">
+            <img src="../T-Shirts/cruzados.png.png" alt="Cruzados T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -488,11 +449,10 @@
         </div>
     </div>
 
-
     <!-- 04 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="the-god-father.png.png" alt="God Father T-Shirt Design">
+            <img src="../T-Shirts/the-god-father.png.png" alt="God Father T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -503,11 +463,10 @@
         </div>
     </div>
 
-
     <!-- 05 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="mangalashery-neelakandan.png.png" alt="Neelakandante Paattalam T-Shirt Design">
+            <img src="../T-Shirts/mangalashery-neelakandan.png.png" alt="Neelakandante Paattalam T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -518,11 +477,10 @@
         </div>
     </div>
 
-
     <!-- 06 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="i-need-more-space.png.png" alt="I Need More Space T-Shirt Design">
+            <img src="../T-Shirts/i-need-more-space.png.png" alt="I Need More Space T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -533,11 +491,10 @@
         </div>
     </div>
 
-
     <!-- 07 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="only-you.png.png" alt="Only You T-Shirt Design">
+            <img src="../T-Shirts/only-you.png.png" alt="Only You T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -548,11 +505,10 @@
         </div>
     </div>
 
-
     <!-- 08 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="wanna-be-yours.png.png" alt="Wanna Be Yours T-Shirt Design">
+            <img src="../T-Shirts/wanna-be-yours.png.png" alt="Wanna Be Yours T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -563,11 +519,10 @@
         </div>
     </div>
 
-
     <!-- 09 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="never-luck.png.png" alt="Never Luck T-Shirt Design">
+            <img src="../T-Shirts/never-luck.png.png" alt="Never Luck T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -578,11 +533,10 @@
         </div>
     </div>
 
-
     <!-- 10 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="spider-man.jpg.png" alt="Spider Man T-Shirt Design">
+            <img src="../T-Shirts/spider-man.jpg.png" alt="Spider Man T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -593,11 +547,10 @@
         </div>
     </div>
 
-
     <!-- 11 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="payippadans.png.png" alt="PAYIPPADAN T-Shirt Design">
+            <img src="../T-Shirts/payippadans.png.png" alt="PAYIPPADAN T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -608,11 +561,10 @@
         </div>
     </div>
 
-
     <!-- 12 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="with-her.png.png" alt="With Her T-Shirt Design">
+            <img src="../T-Shirts/with-her.png.png" alt="With Her T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -623,11 +575,10 @@
         </div>
     </div>
 
-
     <!-- 13 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="lahel-vakkachan.png.png" alt="Lahel Vakkachan T-Shirt Design">
+            <img src="../T-Shirts/lahel-vakkachan.png.png" alt="Lahel Vakkachan T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -638,11 +589,10 @@
         </div>
     </div>
 
-
     <!-- 14 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="sagar-alias-jacky.jpg.png" alt="Sagar Alias Jacky T-Shirt Design">
+            <img src="../T-Shirts/sagar-alias-jacky.jpg.png" alt="Sagar Alias Jacky T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -653,11 +603,10 @@
         </div>
     </div>
 
-
     <!-- 15 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="dodge.jpg.jpg" alt="Dodge T-Shirt Design">
+            <img src="../T-Shirts/dodge.jpg.jpg" alt="Dodge T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -668,11 +617,10 @@
         </div>
     </div>
 
-
     <!-- 16 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="mani.jpg.png" alt="Inspector NADESHAN T-Shirt Design">
+            <img src="../T-Shirts/mani.jpg.png" alt="Inspector NADESHAN T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -683,11 +631,10 @@
         </div>
     </div>
 
-
     <!-- 17 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="cant.png.png" alt="Stay Strong T-Shirt Design">
+            <img src="../T-Shirts/cant.png.png" alt="Stay Strong T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -698,11 +645,10 @@
         </div>
     </div>
 
-
     <!-- 18 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="dream.png.png" alt="Dream T-Shirt Design">
+            <img src="../T-Shirts/dream.png.png" alt="Dream T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -713,11 +659,10 @@
         </div>
     </div>
 
-
     <!-- 19 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="keep-moving.png.png" alt="Keep Moving T-Shirt Design">
+            <img src="../T-Shirts/keep-moving.png.png" alt="Keep Moving T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -728,11 +673,10 @@
         </div>
     </div>
 
-
     <!-- 20 -->
     <div class="shirt-card" onclick="openModal(this)">
         <div class="image-wrap">
-            <img src="money.png.png" alt="Money T-Shirt Design">
+            <img src="../T-Shirts/money.png.png" alt="Money T-Shirt Design">
             <div class="view-overlay">
                 <div class="view-text">View Design</div>
             </div>
@@ -743,11 +687,7 @@
         </div>
     </div>
 
-
 </main>
-
-
-<!-- IMAGE MODAL -->
 
 <div class="modal" id="imageModal" onclick="closeModal(event)">
 
@@ -759,11 +699,9 @@
 
 </div>
 
-
 <footer>
     © 2026 <span>Splatter Graphics</span> — All Rights Reserved.
 </footer>
-
 
 <script>
 
@@ -778,28 +716,9 @@
         document.body.style.overflow = "hidden";
     }
 
-
     function closeModal(event) {
 
         if (
             event &&
             event.target &&
             event.target.closest(".modal-content")
-        ) {
-            return;
-        }
-
-       document.getElementById("imageModal").classList.remove("active");
-        document.body.style.overflow = "";
-    }
-
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") {
-            closeModal();
-        }
-    });
-
-</script>
-
-</body>
-</html>
