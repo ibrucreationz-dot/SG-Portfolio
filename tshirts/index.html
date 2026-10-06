@@ -1,1368 +1,1029 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>T-Shirt Designs | Splatter Graphics</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #030712;
+            --card: #0a1222;
+            --blue: #42d9ff;
+            --blue2: #168cff;
+            --white: #ffffff;
+            --muted: #8b9bb4;
+        }
 
-  <meta name="description"
-        content="RAWQ — Custom T-Shirts made for your story.">
+        body {
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(66, 217, 255, 0.08),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(22, 140, 255, 0.08),
+                    transparent 30%
+                ),
+                var(--bg);
 
-  <title>RAWQ — Custom T-Shirts</title>
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        /* =========================
+           HEADER
+        ========================== */
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+        header {
+            width: 100%;
+            padding: 28px 6%;
 
-  <style>
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-    /* =========================
-       RAWQ COLOR PALETTE
-    ========================== */
+            border-bottom: 1px solid rgba(255,255,255,0.08);
 
-    :root {
-      --red: #D92828;
-      --red-dark: #7D171C;
-      --rose: #F47C82;
+            position: sticky;
+            top: 0;
 
-      --black: #111111;
-      --charcoal: #1C1C1C;
+            z-index: 50;
 
-      --white: #FFFFFF;
-      --muted: #A7A7A7;
+            background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(15px);
+        }
 
-      --border: rgba(255,255,255,0.10);
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
 
-      --max-width: 1200px;
-    }
+        .logo span {
+            color: var(--blue);
+        }
 
+        .back-btn {
+            text-decoration: none;
+            color: white;
 
-    /* =========================
-       RESET
-    ========================== */
+            border: 1px solid rgba(66, 217, 255, 0.45);
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.5;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input,
-    textarea {
-      font-family: inherit;
-    }
-
+            padding: 11px 20px;
 
-    /* =========================
-       NAVBAR
-    ========================== */
+            border-radius: 30px;
 
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 78px;
+            font-size: 0.9rem;
+            font-weight: 600;
 
-      padding: 0 5%;
+            transition: 0.3s ease;
+        }
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+        .back-btn:hover {
+            background: var(--blue);
+            color: #03101b;
 
-      z-index: 1000;
+            box-shadow:
+                0 0 25px rgba(66, 217, 255, 0.35);
+        }
 
-      background: rgba(17,17,17,0.72);
-      backdrop-filter: blur(18px);
+        /* =========================
+           HERO
+        ========================== */
 
-      border-bottom: 1px solid var(--border);
-    }
+        .hero {
+            text-align: center;
 
-    .brand {
-      display: flex;
-      flex-direction: column;
-      line-height: 0.9;
-    }
-
-    .brand-mark {
-      font-size: 1.55rem;
-      font-weight: 900;
-      letter-spacing: 0.25em;
-    }
+            padding: 90px 20px 60px;
+        }
 
-    .brand-sub {
-      font-size: 0.42rem;
-      letter-spacing: 0.28em;
-      color: var(--rose);
-      margin-top: 6px;
-    }
+        .small-label {
+            color: var(--blue);
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 27px;
+            font-family: 'Orbitron', sans-serif;
 
-      font-size: 0.82rem;
-      font-weight: 600;
-    }
+            font-size: 0.85rem;
 
-    .nav-links a:not(.nav-cta) {
-      color: #ddd;
-      transition: 0.25s;
-    }
+            letter-spacing: 5px;
 
-    .nav-links a:not(.nav-cta):hover {
-      color: var(--rose);
-    }
+            font-weight: 700;
 
-    .nav-cta {
-      background: var(--red);
-      padding: 11px 17px;
-      border-radius: 999px;
-    }
+            margin-bottom: 18px;
+        }
 
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
 
-    .menu-toggle span {
-      display: block;
-      width: 25px;
-      height: 2px;
-      background: white;
-      margin: 5px;
-    }
+            font-size:
+                clamp(2.3rem, 6vw, 5rem);
 
+            line-height: 1.1;
 
-    /* =========================
-       HERO
-    ========================== */
+            margin-bottom: 20px;
+        }
 
-    .hero {
-      min-height: 100vh;
+        .hero h1 span {
+            color: var(--blue);
+        }
 
-      max-width: 1400px;
-      margin: auto;
+        .hero p {
+            color: var(--muted);
 
-      padding: 150px 6% 70px;
+            max-width: 600px;
 
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+            margin: auto;
 
-      align-items: center;
+            line-height: 1.7;
 
-      gap: 30px;
+            font-size: 1rem;
+        }
 
-      position: relative;
-    }
+        /* =========================
+           GALLERY
+        ========================== */
 
-    .hero::before {
-      content: "";
+        .gallery {
+            width: min(1400px, 90%);
 
-      position: absolute;
+            margin: 0 auto 100px;
 
-      width: 620px;
-      height: 620px;
+            display: grid;
 
-      right: -160px;
-      top: 70px;
+            grid-template-columns:
+                repeat(3, 1fr);
 
-      background:
-        radial-gradient(
-          circle,
-          rgba(217,40,40,0.28),
-          transparent 65%
-        );
+            gap: 28px;
+        }
 
-      pointer-events: none;
-    }
+        .shirt-card {
+            position: relative;
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.06),
+                    rgba(255,255,255,0.015)
+                );
 
-    .eyebrow {
-      color: var(--rose);
+            border:
+                1px solid rgba(255,255,255,0.08);
 
-      font-size: 0.72rem;
+            border-radius: 18px;
 
-      font-weight: 800;
+            padding: 10px;
 
-      letter-spacing: 0.24em;
+            overflow: hidden;
 
-      margin-bottom: 20px;
-    }
+            cursor: pointer;
 
-    .hero h1 {
-      font-size: clamp(3.1rem, 7vw, 7rem);
+            opacity: 0;
 
-      line-height: 0.9;
+            transform: translateY(40px);
 
-      letter-spacing: -0.065em;
+            animation:
+                cardReveal 0.8s ease forwards;
+        }
 
-      font-weight: 900;
-    }
+        .shirt-card:nth-child(1) {
+            animation-delay: .05s;
+        }
 
-    .hero h1 span {
-      color: var(--red);
-    }
+        .shirt-card:nth-child(2) {
+            animation-delay: .10s;
+        }
 
-    .hero-copy {
-      max-width: 530px;
+        .shirt-card:nth-child(3) {
+            animation-delay: .15s;
+        }
 
-      color: #bbb;
+        .shirt-card:nth-child(4) {
+            animation-delay: .20s;
+        }
 
-      margin: 28px 0;
+        .shirt-card:nth-child(5) {
+            animation-delay: .25s;
+        }
 
-      font-size: 1rem;
-    }
+        .shirt-card:nth-child(6) {
+            animation-delay: .30s;
+        }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+        .shirt-card:nth-child(7) {
+            animation-delay: .35s;
+        }
 
-    .btn {
-      display: inline-flex;
+        .shirt-card:nth-child(8) {
+            animation-delay: .40s;
+        }
 
-      align-items: center;
-      justify-content: center;
+        .shirt-card:nth-child(9) {
+            animation-delay: .45s;
+        }
 
-      gap: 14px;
+        .shirt-card:nth-child(10) {
+            animation-delay: .50s;
+        }
 
-      padding: 14px 21px;
+        .shirt-card:nth-child(11) {
+            animation-delay: .55s;
+        }
 
-      border-radius: 5px;
+        .shirt-card:nth-child(12) {
+            animation-delay: .60s;
+        }
 
-      font-weight: 800;
+        .shirt-card:nth-child(13) {
+            animation-delay: .65s;
+        }
 
-      font-size: 0.78rem;
+        .shirt-card:nth-child(14) {
+            animation-delay: .70s;
+        }
 
-      letter-spacing: 0.04em;
+        .shirt-card:nth-child(15) {
+            animation-delay: .75s;
+        }
 
-      border: 1px solid transparent;
+        .shirt-card:nth-child(16) {
+            animation-delay: .80s;
+        }
 
-      transition: 0.25s;
+        .shirt-card:nth-child(17) {
+            animation-delay: .85s;
+        }
 
-      cursor: pointer;
-    }
+        .shirt-card:nth-child(18) {
+            animation-delay: .90s;
+        }
 
-    .btn-primary {
-      background: var(--red);
-      color: white;
-    }
+        .shirt-card:nth-child(19) {
+            animation-delay: .95s;
+        }
 
-    .btn-primary:hover {
-      background: #ef3434;
-      transform: translateY(-2px);
-    }
+        .shirt-card:nth-child(20) {
+            animation-delay: 1s;
+        }
 
-    .btn-ghost {
-      border-color: var(--border);
-      color: white;
-    }
+        @keyframes cardReveal {
 
-    .btn-ghost:hover {
-      border-color: var(--rose);
-    }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
+        }
 
-    /* HERO STATS */
+        .shirt-card:hover {
+            border-color:
+                rgba(66,217,255,0.55);
 
-    .hero-meta {
-      display: flex;
-      gap: 35px;
+            transform:
+                translateY(-8px);
 
-      margin-top: 60px;
-    }
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.45),
+                0 0 30px rgba(66,217,255,0.08);
+        }
 
-    .hero-meta div {
-      display: flex;
-      align-items: center;
+        /* =========================
+           IMAGE
+        ========================== */
 
-      gap: 10px;
-    }
+        .image-wrap {
+            position: relative;
 
-    .hero-meta strong {
-      font-size: 0.72rem;
-      color: var(--red);
-    }
+            width: 100%;
 
-    .hero-meta span {
-      color: #999;
+            aspect-ratio: 3 / 4;
 
-      font-size: 0.62rem;
+            overflow: hidden;
 
-      text-transform: uppercase;
+            border-radius: 12px;
 
-      letter-spacing: 0.12em;
-    }
+            background: #080d18;
+        }
 
+        .image-wrap img {
+            width: 100%;
+            height: 100%;
 
-    /* =========================
-       HERO T-SHIRT VISUAL
-    ========================== */
+            display: block;
 
-    .hero-visual {
-      min-height: 580px;
+            object-fit: cover;
 
-      display: grid;
+            transition:
+                transform 0.6s ease;
+        }
 
-      place-items: center;
+        .shirt-card:hover img {
+            transform:
+                scale(1.035);
+        }
 
-      position: relative;
-    }
+        /* =========================
+           VIEW OVERLAY
+        ========================== */
 
-    .visual-ring {
-      width: 450px;
-      height: 450px;
+        .view-overlay {
+            position: absolute;
 
-      border: 1px solid rgba(244,124,130,0.25);
+            inset: 0;
 
-      border-radius: 50%;
+            display: flex;
 
-      position: absolute;
+            align-items: center;
+            justify-content: center;
 
-      box-shadow:
-        0 0 100px rgba(217,40,40,0.16);
-    }
+            background:
+                rgba(0,0,0,0.35);
 
-    .shirt-card {
-      position: relative;
+            opacity: 0;
 
-      width: 290px;
-      height: 390px;
+            transition: 0.3s ease;
+        }
 
-      filter:
-        drop-shadow(
-          0 35px 35px rgba(0,0,0,0.5)
-        );
-    }
+        .shirt-card:hover
+        .view-overlay {
+            opacity: 1;
+        }
 
-    .shirt-body {
-      position: absolute;
+        .view-text {
+            padding: 10px 18px;
 
-      inset: 70px 52px 0;
+            border-radius: 30px;
 
-      background:
-        linear-gradient(
-          145deg,
-          #262626,
-          #0b0b0b
-        );
+            background:
+                rgba(3,7,18,0.85);
 
-      border-radius: 15px 15px 4px 4px;
+            border:
+                1px solid rgba(66,217,255,0.7);
 
-      display: flex;
+            color: white;
 
-      flex-direction: column;
+            font-size: 0.85rem;
 
-      align-items: center;
+            font-weight: 600;
+        }
 
-      justify-content: center;
+        /* =========================
+           CARD INFO
+        ========================== */
 
-      border: 1px solid #333;
-    }
+        .shirt-info {
+            padding:
+                18px 10px 12px;
+        }
 
-    .shirt-body span {
-      font-size: 2rem;
+        .number {
+            color: var(--blue);
 
-      font-weight: 900;
+            font-size: 0.75rem;
 
-      letter-spacing: 0.2em;
-    }
+            font-weight: 700;
 
-    .shirt-body small {
-      font-size: 0.48rem;
+            letter-spacing: 2px;
 
-      color: var(--rose);
+            margin-bottom: 7px;
+        }
 
-      letter-spacing: 0.22em;
+        .shirt-info h2 {
+            font-family: 'Orbitron', sans-serif;
 
-      margin-top: 6px;
-    }
+            font-size: 1rem;
 
-    .shirt-neck {
-      position: absolute;
+            font-weight: 600;
+        }
 
-      z-index: 2;
+        /* =========================
+           MODAL
+        ========================== */
 
-      width: 76px;
-      height: 42px;
+        .modal {
+            position: fixed;
 
-      left: 107px;
-      top: 55px;
+            inset: 0;
 
-      border-radius: 50%;
+            background:
+                rgba(0,0,0,0.88);
 
-      background: #0c0c0c;
+            display: flex;
 
-      border: 1px solid #333;
-    }
+            align-items: center;
+            justify-content: center;
 
-    .shirt-sleeve {
-      position: absolute;
+            padding: 30px;
 
-      top: 77px;
+            opacity: 0;
 
-      width: 90px;
-      height: 150px;
+            visibility: hidden;
 
-      background: #1d1d1d;
+            transition: 0.3s ease;
 
-      border: 1px solid #333;
-    }
+            z-index: 100;
+        }
 
-    .shirt-sleeve.left {
-      left: 8px;
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
 
-      transform: rotate(19deg);
+        .modal-content {
+            position: relative;
 
-      border-radius:
-        15px 5px 25px 18px;
-    }
+            max-width: 600px;
 
-    .shirt-sleeve.right {
-      right: 8px;
+            max-height: 92vh;
 
-      transform: rotate(-19deg);
+            width: 100%;
 
-      border-radius:
-        5px 15px 18px 25px;
-    }
+            display: flex;
 
-    .floating-tag {
-      position: absolute;
+            justify-content: center;
+        }
 
-      border: 1px solid rgba(255,255,255,0.2);
+        .modal-content img {
+            max-width: 100%;
 
-      background: rgba(17,17,17,0.72);
+            max-height: 88vh;
 
-      backdrop-filter: blur(8px);
+            width: auto;
+            height: auto;
 
-      padding: 9px 12px;
+            object-fit: contain;
 
-      font-size: 0.55rem;
+            border-radius: 14px;
 
-      letter-spacing: 0.18em;
+            box-shadow:
+                0 25px 80px rgba(0,0,0,0.7);
+        }
 
-      color: #ddd;
-    }
+        /* =========================
+           CLOSE BUTTON
+        ========================== */
 
-    .tag-one {
-      top: 22%;
-      left: 8%;
-    }
+        .close-btn {
+            position: fixed;
 
-    .tag-two {
-      right: 6%;
-      bottom: 21%;
+            top: 25px;
+            right: 30px;
 
-      color: var(--rose);
-    }
+            width: 45px;
+            height: 45px;
 
+            border:
+                1px solid rgba(255,255,255,0.25);
 
-    /* =========================
-       TICKER
-    ========================== */
+            border-radius: 50%;
 
-    .ticker {
-      overflow: hidden;
+            background:
+                rgba(10,18,34,0.9);
 
-      white-space: nowrap;
+            color: white;
 
-      border-block: 1px solid var(--border);
+            font-size: 1.5rem;
 
-      padding: 14px 0;
+            cursor: pointer;
 
-      color: #888;
+            z-index: 110;
+        }
 
-      font-size: 0.68rem;
+        .close-btn:hover {
+            background: var(--blue);
 
-      letter-spacing: 0.25em;
-    }
+            color: #03101b;
+        }
 
-    .ticker div {
-      display: inline-block;
+        /* =========================
+           FOOTER
+        ========================== */
 
-      animation:
-        ticker 20s linear infinite;
-    }
+        footer {
+            text-align: center;
 
-    .ticker span {
-      color: var(--red);
+            padding: 35px 20px;
 
-      margin: 0 20px;
-    }
+            border-top:
+                1px solid rgba(255,255,255,0.08);
 
-    @keyframes ticker {
-      to {
-        transform: translateX(-30%);
-      }
-    }
+            color: var(--muted);
 
+            font-size: 0.85rem;
+        }
 
-    /* =========================
-       GENERAL SECTION
-    ========================== */
+        footer span {
+            color: var(--blue);
+        }
 
-    .section {
-      max-width: var(--max-width);
+        /* =========================
+           TABLET
+        ========================== */
 
-      margin: auto;
+        @media (max-width: 900px) {
 
-      padding: 120px 5%;
-    }
+            .gallery {
+                grid-template-columns:
+                    repeat(2, 1fr);
 
-    .section-heading {
-      display: flex;
+                gap: 20px;
+            }
 
-      justify-content: space-between;
+        }
 
-      align-items: end;
+        /* =========================
+           MOBILE
+        ========================== */
 
-      gap: 20px;
+        @media (max-width: 600px) {
 
-      margin-bottom: 45px;
-    }
+            header {
+                padding: 20px 5%;
+            }
 
-    .section-heading h2 {
-      font-size: clamp(2.5rem,5vw,5rem);
+            .logo {
+                font-size: 1rem;
+            }
 
-      line-height: 0.9;
+            .back-btn {
+                padding: 9px 14px;
 
-      letter-spacing: -0.06em;
+                font-size: 0.78rem;
+            }
 
-      font-weight: 900;
-    }
+            .hero {
+                padding:
+                    65px 20px 45px;
+            }
 
-    .section-heading h2 span {
-      color: var(--red);
-    }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
 
-    .text-link {
-      color: #aaa;
+            .gallery {
+                width: 92%;
 
-      font-size: 0.75rem;
+                grid-template-columns:
+                    repeat(2, 1fr);
 
-      border-bottom: 1px solid #555;
+                gap: 12px;
+            }
 
-      padding-bottom: 5px;
-    }
+            .shirt-card {
+                padding: 6px;
 
+                border-radius: 12px;
+            }
 
-    /* =========================
-       PRODUCTS
-    ========================== */
+            .image-wrap {
+                border-radius: 8px;
+            }
 
-    .product-grid {
-      display: grid;
+            .shirt-info {
+                padding:
+                    11px 5px 7px;
+            }
 
-      grid-template-columns:
-        repeat(3,1fr);
+            .shirt-info h2 {
+                font-size: 0.72rem;
+            }
 
-      gap: 18px;
-    }
+            .number {
+                font-size: 0.62rem;
 
-    .product-card {
-      min-width: 0;
-    }
+                margin-bottom: 4px;
+            }
 
-    .product-image {
-      height: 470px;
+            .view-overlay {
+                display: none;
+            }
 
-      position: relative;
+            .modal {
+                padding: 15px;
+            }
 
-      display: grid;
+            .close-btn {
+                top: 15px;
+                right: 15px;
+            }
 
-      place-items: center;
+        }
 
-      overflow: hidden;
-    }
-
-    .product-image::after {
-      content: "";
-
-      position: absolute;
-
-      inset: 15px;
-
-      border: 1px solid
-        rgba(255,255,255,0.07);
-    }
-
-    .product-image span {
-      font-size: 2rem;
-
-      font-weight: 900;
-
-      letter-spacing: 0.15em;
-
-      z-index: 1;
-    }
-
-    .black-shirt {
-      background:
-        linear-gradient(
-          145deg,
-          #282828,
-          #090909
-        );
-    }
-
-    .red-shirt {
-      background:
-        linear-gradient(
-          145deg,
-          #e33a3a,
-          #79161b
-        );
-    }
-
-    .white-shirt {
-      background:
-        linear-gradient(
-          145deg,
-          #eee,
-          #bcbcbc
-        );
-
-      color: #111;
-    }
-
-    .product-info {
-      display: flex;
-
-      justify-content: space-between;
-
-      gap: 20px;
-
-      padding: 17px 2px;
-
-      border-bottom: 1px solid var(--border);
-    }
-
-    .product-info h3 {
-      font-size: 0.9rem;
-    }
-
-    .product-info p {
-      color: #777;
-
-      font-size: 0.65rem;
-
-      margin-top: 5px;
-    }
-
-    .product-info strong {
-      font-size: 0.85rem;
-
-      color: var(--rose);
-    }
-
-
-    /* =========================
-       CUSTOMIZE
-    ========================== */
-
-    .custom-section {
-      background:
-        linear-gradient(
-          135deg,
-          #1c1c1c,
-          #130a0a 55%,
-          #7d171c
-        );
-
-      padding:
-        110px
-        max(5%, calc((100% - 1100px)/2));
-
-      display: grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
-      gap: 80px;
-    }
-
-    .custom-section h2 {
-      font-size:
-        clamp(2.7rem,5vw,5.2rem);
-
-      line-height: 0.9;
-
-      letter-spacing: -0.06em;
-    }
-
-    .custom-section h2 span {
-      color: var(--red);
-    }
-
-    .custom-section p:not(.eyebrow) {
-      color: #c4c4c4;
-
-      margin: 25px 0 30px;
-
-      max-width: 520px;
-    }
-
-    .custom-steps {
-      display: grid;
-    }
-
-    .step {
-      display: grid;
-
-      grid-template-columns: 60px 1fr;
-
-      gap: 15px;
-
-      padding: 22px 0;
-
-      border-bottom:
-        1px solid rgba(255,255,255,0.16);
-    }
-
-    .step b {
-      color: var(--rose);
-
-      font-size: 0.75rem;
-    }
-
-    .step h3 {
-      font-size: 1rem;
-    }
-
-    .step p {
-      margin: 5px 0 0 !important;
-
-      font-size: 0.78rem;
-
-      color: #999 !important;
-    }
-
-
-    /* =========================
-       COLLECTIONS
-    ========================== */
-
-    .collection-grid {
-      display: grid;
-
-      grid-template-columns: 2fr 1fr;
-
-      grid-template-rows:
-        250px 250px;
-
-      gap: 15px;
-    }
-
-    .collection-card {
-      padding: 30px;
-
-      position: relative;
-
-      overflow: hidden;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: end;
-
-      border: 1px solid var(--border);
-    }
-
-    .collection-card::before {
-      content: "";
-
-      position: absolute;
-
-      width: 250px;
-      height: 250px;
-
-      right: -70px;
-      top: -70px;
-
-      border-radius: 50%;
-
-      background:
-        rgba(255,255,255,0.05);
-    }
-
-    .collection-card h3 {
-      font-size: 2rem;
-
-      line-height: 0.95;
-
-      position: relative;
-    }
-
-    .collection-card p {
-      color: var(--rose);
-
-      font-size: 0.65rem;
-
-      margin-bottom: 10px;
-
-      position: relative;
-    }
-
-    .collection-card > span {
-      font-size: 1.4rem;
-
-      position: relative;
-    }
-
-    .collection-large {
-      grid-row: 1 / 3;
-
-      background:
-        linear-gradient(
-          145deg,
-          #262626,
-          #101010
-        );
-    }
-
-    .collection-red {
-      background:
-        linear-gradient(
-          145deg,
-          #d92828,
-          #7d171c
-        );
-    }
-
-    .collection-dark {
-      background: #151515;
-    }
-
-
-    /* =========================
-       ABOUT
-    ========================== */
-
-    .about-section {
-      max-width: 1200px;
-
-      margin: auto;
-
-      padding: 120px 5%;
-
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 80px;
-    }
-
-    .about-section h2 {
-      font-size:
-        clamp(3rem,5vw,5.5rem);
-
-      line-height: 0.9;
-
-      letter-spacing: -0.06em;
-    }
-
-    .about-section h2 span {
-      color: var(--red);
-    }
-
-    .about-copy > p {
-      color: #aaa;
-
-      font-size: 1.05rem;
-
-      max-width: 500px;
-    }
-
-    .stats {
-      display: flex;
-
-      gap: 40px;
-
-      margin-top: 60px;
-    }
-
-    .stats div {
-      display: flex;
-
-      flex-direction: column;
-    }
-
-    .stats strong {
-      font-size: 2rem;
-    }
-
-    .stats span {
-      color: #777;
-
-      font-size: 0.65rem;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.12em;
-    }
-
-
-    /* =========================
-       CONTACT
-    ========================== */
-
-    .contact-section {
-      padding: 80px 5% 120px;
-
-      max-width: 1200px;
-
-      margin: auto;
-    }
-
-    .contact-card {
-      background: #191919;
-
-      border: 1px solid var(--border);
-
-      padding: 55px;
-
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 70px;
-    }
-
-    .contact-card h2 {
-      font-size:
-        clamp(2.7rem,5vw,5rem);
-
-      line-height: 0.9;
-
-      letter-spacing: -0.06em;
-    }
-
-    .contact-card h2 span {
-      color: var(--red);
-    }
-
-    .contact-note {
-      color: #888;
-
-      max-width: 400px;
-
-      margin-top: 25px;
-    }
-
-    form {
-      display: grid;
-
-      gap: 15px;
-    }
-
-    label {
-      font-size: 0.65rem;
-
-      color: #999;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.1em;
-    }
-
-    input,
-    textarea {
-      display: block;
-
-      width: 100%;
-
-      margin-top: 7px;
-
-      border: 1px solid #333;
-
-      background: #111;
-
-      color: white;
-
-      padding: 13px;
-
-      outline: none;
-
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: var(--red);
-    }
-
-    .form-status {
-      color: var(--rose);
-
-      font-size: 0.75rem;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================== */
-
-    footer {
-      border-top:
-        1px solid var(--border);
-
-      padding: 35px 5%;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      gap: 20px;
-
-      color: #666;
-
-      font-size: 0.65rem;
-    }
-
-    .footer-brand {
-      display: flex;
-
-      flex-direction: column;
-
-      color: white;
-    }
-
-    .footer-brand span {
-      font-size: 1.2rem;
-
-      font-weight: 900;
-
-      letter-spacing: 0.2em;
-    }
-
-    .footer-brand small {
-      color: var(--rose);
-
-      letter-spacing: 0.18em;
-
-      font-size: 0.42rem;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================== */
-
-    @media (max-width: 850px) {
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        position: absolute;
-
-        top: 78px;
-
-        left: 0;
-        right: 0;
-
-        padding: 20px 5%;
-
-        background: #111;
-
-        display: none;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        border-bottom:
-          1px solid var(--border);
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-cta {
-        text-align: center;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-
-        padding-top: 125px;
-      }
-
-      .hero-visual {
-        min-height: 430px;
-      }
-
-      .visual-ring {
-        width: 330px;
-        height: 330px;
-      }
-
-      .product-grid,
-      .custom-section,
-      .about-section,
-      .contact-card {
-        grid-template-columns: 1fr;
-      }
-
-      .collection-grid {
-        grid-template-columns: 1fr;
-
-        grid-template-rows:
-          250px 250px 250px;
-      }
-
-      .collection-large {
-        grid-row: auto;
-      }
-
-      .section-heading {
-        align-items: flex-start;
-
-        flex-direction: column;
-      }
-
-      .product-image {
-        height: 390px;
-      }
-
-      .custom-section {
-        gap: 50px;
-      }
-
-      .about-section {
-        gap: 50px;
-      }
-
-      footer {
-        flex-direction: column;
-
-        align-items: flex-start;
-      }
-    }
-
-
-    @media (max-width: 500px) {
-
-      .navbar {
-        height: 70px;
-      }
-
-      .nav-links {
-        top: 70px;
-      }
-
-      .hero {
-        padding-inline: 5%;
-      }
-
-      .hero-meta {
-        gap: 18px;
-      }
-
-      .hero-meta span {
-        font-size: 0.52rem;
-      }
-
-      .hero-visual {
-        min-height: 380px;
-      }
-
-      .shirt-card {
-        transform: scale(0.82);
-      }
-
-      .contact-card {
-        padding: 30px 22px;
-      }
-
-      .section {
-        padding-block: 85px;
-      }
-    }
-
-  </style>
+    </style>
 </head>
 
 
 <body>
 
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-  <!-- =========================
-       NAVIGATION
-  ========================== -->
+    <header>
 
-  <header class="navbar" id="navbar">
+        <div class="logo">
+            SPLATTER <span>GRAPHICS</span>
+        </div>
 
-    <a href="#home" class="brand">
+        <a
+            href="index.html"
+            class="back-btn"
+        >
+            ← Back to Portfolio
+        </a>
 
-      <span class="brand-mark">
-        RAWQ
-      </span>
-
-      <span class="brand-sub">
-        CUSTOM T-SHIRTS
-      </span>
-
-    </a>
-
-
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      aria-label="Open menu"
-      aria-expanded="false">
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-    </button>
+    </header>
 
 
-    <nav class="nav-links" id="navLinks">
+    <!-- =========================
+         HERO
+    ========================== -->
 
-      <a href="#home">
-        Home
-      </a>
+    <section class="hero">
 
-      <a href="#shop">
-        Shop
-      </a>
-
-      <a href="#customize">
-        Customize
-      </a>
-
-      <a href="#collections">
-        Collections
-      </a>
-
-      <a href="#about">
-        About
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
-      <a href="#customize" class="nav-cta">
-        Start Designing
-      </a>
-
-    </nav>
-
-  </header>
-
-
-
-  <!-- =========================
-       MAIN
-  ========================== -->
-
-  <main>
-
-
-    <!-- HERO -->
-
-    <section class="hero" id="home">
-
-      <div class="hero-content">
-
-        <p class="eyebrow">
-          RAWQ / CUSTOM WEAR
-        </p>
+        <div class="small-label">
+            T-SHIRT COLLECTION
+        </div>
 
         <h1>
-          WEAR
-          <br>
-          <span>YOUR STORY.</span>
+            T-Shirt <span>Designs</span>
         </h1>
 
-        <p class="hero-copy">
-          Premium custom T-shirts designed around
-          your ideas, your style and your identity.
+        <p>
+            A collection of custom T-shirt designs
+            created by Splatter Graphics.
+            Creative typography, concepts and
+            visual identities made for print.
         </p>
 
-
-        <div class="hero-actions">
-
-          <a
-            href="#customize"
-            class="btn btn-primary">
-
-            Customize Now
-            <span>↗</span>
-
-          </a>
+    </section>
 
 
-          <a
-            href="#shop"
-            class="btn btn-ghost">
+    <!-- =========================
+         GALLERY
+    ========================== -->
 
-            Explore Collection
+    <main class="gallery">
 
-          </a>
+
+        <!-- 01 -->
+
+        <div
+            class="shirt-card"
+            onclick="openModal(this)"
+        >
+
+            <div class="image-wrap">
+
+                <img
+                    src="T-Shirts/nagavally.png.png"
+                    alt="Nagavalli T-Shirt Design"
+                >
+
+                <div class="view-overlay">
+                    <div class="view-text">
+                        View Design
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shirt-info">
+
+                <div class="number">
+                    01
+                </div>
+
+                <h2>
+                    Nagavalli
+                </h2>
+
+            </div>
 
         </div>
 
 
-        <div class="hero-meta">
+        <!-- 02 -->
 
-          <div>
+        <div
+            class="shirt-card"
+            onclick="openModal(this)"
+        >
 
-            <strong>
-              01
-            </strong>
+            <div class="image-wrap">
 
-            <span>
-              Custom
-              <br>
-              Designs
-            </span>
+                <img
+                    src="T-Shirts/onam.png.png"
+                    alt="Onam T-Shirt Design"
+                >
 
-          </div>
+                <div class="view-overlay">
+                    <div class="view-text">
+                        View Design
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shirt-info">
+
+                <div class="number">
+                    02
+                </div>
+
+                <h2>
+                    Onam
+                </h2>
+
+            </div>
+
+        </div>
 
 
-          <div>
+        <!-- 03 -->
 
-            <strong>
-              02
-            </strong>
+        <div
+            class="shirt-card"
+            onclick="openModal(this)"
+        >
 
-            <span>
-              Premium
+            <div class="image-wrap">
+
+                <img
+                    src="T-Shirts/cruzados.png.png"
+                    alt="Cruzados T-Shirt Design"
+                >
+
+                <div class="view-overlay">
+                    <div class="view-text">
+                        View Design
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shirt-info">
+
+                <div class="number">
+                    03
+                </div>
+
+                <h2>
+                    Cruzados
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- 04 -->
+
+        <div
+            class="shirt-card"
+            onclick="openModal(this)"
+        >
+
+            <div class="image-wrap">
+
+                <img
+                    src="T-Shirts/the-god-father.png.png"
+                    alt="God Father T-Shirt Design"
+                >
+
+                <div class="view-overlay">
+                    <div class="view-text">
+                        View Design
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shirt-info">
+
+                <div class="number">
+                    04
+                </div>
+
+                <h2>
+                    God Father
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- 05 -->
+
+        <div
+            class="shirt-card"
+            onclick="openModal(this)"
+        >
+
+            <div class="image-wrap">
+
+                <img
+                    src="T-Shirts/mangalashery-neelakandan.png.png"
+                    alt="Neelakandante Paattalam T-Shirt Design"
+                >
+
+                <div class="view-overlay">
+                    <div class="view-text">
+                        View Design
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shirt-info">
+
+                <div class="number">
+                    05
+                </div>
+
+                <h2>
+                    Neelakandante Paattalam
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- 06 -->
+
+        <div
+            class="shirt-card"
+            onclick="openModal(this)"
+        >
+
+            <div class="image-wrap">
+
+                <img
+                    src="T-Shirts/i-need-more-space.png.png"
+                    alt="I Need More Space T-Shirt Design"
+                >
+
+                <div class="view-overlay">
+                    <div class="view-text">
+                        View Design
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shirt-info">
+
+                <div class="number">
+                    06
+                </div>
+
+                <h2>
+                    I Need More Space
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- 07 -->
+
+        <div
+            class="shirt-card"
+            onclick="openModal(this)"
+        >
+
+            <div class="image-wrap">
+
+                <img
+                    src="T-Shirts/only-you.png.png"
+                    alt="Only You T-Shirt Design"
+                >
+
+                <div class="view-overlay">
+                    <div class="view-text">
+                        View Design
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shirt-info">
+
+                <div class="number">
+                    07
+                </div>
+
+                <h2>
+                    Only You
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- 08 -->
+
+        <div
+            class="shirt-card"
+            onclick="openModal(this)"
+        >
+
+            <div class="image-wrap">
+
+                <img
+                    src="T-Shirts/wanna-be-yours.png.png"
+                    alt="Wanna Be Yours T-Shirt Design"
+                >
+
+                <div class="view-overlay">
+                    <div class="view-text">
+                        View Design
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shirt-info">
+
+                <div class="number">
+                    08
+                </div>
+
+                <h2>
+                    Wanna Be Yours
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- 09 -->
+
+        <div
+            class="shirt-card"
+            onclick="openModal(this)"
+        >
+
+            <div class="image-wrap">
+
+                <img
+                    src="T-Shirts/never-luck.png.png"
+                    alt="Never Luck T-Shirt Design"
+                >
+
+                <div class="view-overlay">
+                    <div class="view-text">
+                        View Design
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shirt-info">
+
+                <div class="number">
+                    09
+                </div>
+
+                <h2>
+                    Never Luck
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div
+            class="shirt-card"
+            onclick="openModal(this)"
+        >
+
+            <div class="image-wrap">
