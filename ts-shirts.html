@@ -1,1029 +1,1232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>T-Shirt Designs | Splatter Graphics</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg: #030712;
-            --card: #0a1222;
-            --blue: #42d9ff;
-            --blue2: #168cff;
-            --white: #ffffff;
-            --muted: #8b9bb4;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            background:
-                radial-gradient(
-                    circle at 10% 10%,
-                    rgba(66, 217, 255, 0.08),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 90% 80%,
-                    rgba(22, 140, 255, 0.08),
-                    transparent 30%
-                ),
-                var(--bg);
+<title>T-Shirt Designs | Splatter Graphics</title>
 
-            color: var(--white);
-            font-family: 'Inter', sans-serif;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        /* =========================
-           HEADER
-        ========================== */
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-        header {
-            width: 100%;
-            padding: 28px 6%;
+<style>
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+:root{
+    --bg:#030712;
+    --card:#0a1222;
+    --blue:#42d9ff;
+    --blue2:#168cff;
+    --white:#ffffff;
+    --muted:#8b9bb4;
+}
 
-            position: sticky;
-            top: 0;
+html{
+    scroll-behavior:smooth;
+}
 
-            z-index: 50;
+body{
+    background:
+        radial-gradient(circle at 10% 10%,rgba(66,217,255,.08),transparent 30%),
+        radial-gradient(circle at 90% 80%,rgba(22,140,255,.08),transparent 30%),
+        var(--bg);
 
-            background: rgba(3, 7, 18, 0.85);
-            backdrop-filter: blur(15px);
-        }
+    color:var(--white);
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+}
 
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-        }
+/* HEADER */
 
-        .logo span {
-            color: var(--blue);
-        }
+header{
+    width:100%;
+    padding:25px 6%;
 
-        .back-btn {
-            text-decoration: none;
-            color: white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-            border: 1px solid rgba(66, 217, 255, 0.45);
+    position:sticky;
+    top:0;
+    z-index:50;
 
-            padding: 11px 20px;
+    background:rgba(3,7,18,.88);
+    backdrop-filter:blur(15px);
 
-            border-radius: 30px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
 
-            font-size: 0.9rem;
-            font-weight: 600;
+.logo{
+    font-family:'Orbitron',sans-serif;
+    font-size:1.25rem;
+    font-weight:800;
+    letter-spacing:2px;
+}
 
-            transition: 0.3s ease;
-        }
+.logo span{
+    color:var(--blue);
+}
 
-        .back-btn:hover {
-            background: var(--blue);
-            color: #03101b;
+.back-btn{
+    color:white;
+    text-decoration:none;
 
-            box-shadow:
-                0 0 25px rgba(66, 217, 255, 0.35);
-        }
+    border:1px solid rgba(66,217,255,.45);
 
-        /* =========================
-           HERO
-        ========================== */
+    padding:10px 18px;
+    border-radius:30px;
 
-        .hero {
-            text-align: center;
+    font-size:.85rem;
+    font-weight:600;
 
-            padding: 90px 20px 60px;
-        }
+    transition:.3s;
+}
 
-        .small-label {
-            color: var(--blue);
+.back-btn:hover{
+    background:var(--blue);
+    color:#03101b;
 
-            font-family: 'Orbitron', sans-serif;
+    box-shadow:0 0 25px rgba(66,217,255,.35);
+}
 
-            font-size: 0.85rem;
+/* HERO */
 
-            letter-spacing: 5px;
+.hero{
+    text-align:center;
+    padding:90px 20px 60px;
+}
 
-            font-weight: 700;
+.small-label{
+    color:var(--blue);
 
-            margin-bottom: 18px;
-        }
+    font-family:'Orbitron',sans-serif;
 
-        .hero h1 {
-            font-family: 'Orbitron', sans-serif;
+    font-size:.8rem;
+    font-weight:700;
 
-            font-size:
-                clamp(2.3rem, 6vw, 5rem);
+    letter-spacing:5px;
 
-            line-height: 1.1;
+    margin-bottom:18px;
+}
 
-            margin-bottom: 20px;
-        }
+.hero h1{
+    font-family:'Orbitron',sans-serif;
 
-        .hero h1 span {
-            color: var(--blue);
-        }
+    font-size:clamp(2.3rem,6vw,5rem);
 
-        .hero p {
-            color: var(--muted);
+    line-height:1.1;
 
-            max-width: 600px;
+    margin-bottom:20px;
+}
 
-            margin: auto;
+.hero h1 span{
+    color:var(--blue);
+}
 
-            line-height: 1.7;
+.hero p{
+    color:var(--muted);
 
-            font-size: 1rem;
-        }
+    max-width:620px;
 
-        /* =========================
-           GALLERY
-        ========================== */
+    margin:auto;
 
-        .gallery {
-            width: min(1400px, 90%);
+    line-height:1.7;
 
-            margin: 0 auto 100px;
+    font-size:1rem;
+}
 
-            display: grid;
+/* GALLERY */
 
-            grid-template-columns:
-                repeat(3, 1fr);
+.gallery{
+    width:min(1400px,90%);
 
-            gap: 28px;
-        }
+    margin:0 auto 100px;
 
-        .shirt-card {
-            position: relative;
+    display:grid;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,0.06),
-                    rgba(255,255,255,0.015)
-                );
+    grid-template-columns:repeat(3,1fr);
 
-            border:
-                1px solid rgba(255,255,255,0.08);
+    gap:28px;
+}
 
-            border-radius: 18px;
+.shirt-card{
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.06),
+            rgba(255,255,255,.015)
+        );
 
-            padding: 10px;
+    border:1px solid rgba(255,255,255,.08);
 
-            overflow: hidden;
+    border-radius:18px;
 
-            cursor: pointer;
+    padding:10px;
 
-            opacity: 0;
+    overflow:hidden;
 
-            transform: translateY(40px);
+    cursor:pointer;
 
-            animation:
-                cardReveal 0.8s ease forwards;
-        }
+    opacity:0;
 
-        .shirt-card:nth-child(1) {
-            animation-delay: .05s;
-        }
+    transform:translateY(35px);
 
-        .shirt-card:nth-child(2) {
-            animation-delay: .10s;
-        }
+    animation:reveal .7s ease forwards;
 
-        .shirt-card:nth-child(3) {
-            animation-delay: .15s;
-        }
+    transition:.35s;
+}
 
-        .shirt-card:nth-child(4) {
-            animation-delay: .20s;
-        }
+.shirt-card:nth-child(1){animation-delay:.05s}
+.shirt-card:nth-child(2){animation-delay:.10s}
+.shirt-card:nth-child(3){animation-delay:.15s}
+.shirt-card:nth-child(4){animation-delay:.20s}
+.shirt-card:nth-child(5){animation-delay:.25s}
+.shirt-card:nth-child(6){animation-delay:.30s}
+.shirt-card:nth-child(7){animation-delay:.35s}
+.shirt-card:nth-child(8){animation-delay:.40s}
+.shirt-card:nth-child(9){animation-delay:.45s}
+.shirt-card:nth-child(10){animation-delay:.50s}
+.shirt-card:nth-child(11){animation-delay:.55s}
+.shirt-card:nth-child(12){animation-delay:.60s}
+.shirt-card:nth-child(13){animation-delay:.65s}
+.shirt-card:nth-child(14){animation-delay:.70s}
+.shirt-card:nth-child(15){animation-delay:.75s}
+.shirt-card:nth-child(16){animation-delay:.80s}
+.shirt-card:nth-child(17){animation-delay:.85s}
+.shirt-card:nth-child(18){animation-delay:.90s}
+.shirt-card:nth-child(19){animation-delay:.95s}
+.shirt-card:nth-child(20){animation-delay:1s}
 
-        .shirt-card:nth-child(5) {
-            animation-delay: .25s;
-        }
+@keyframes reveal{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
-        .shirt-card:nth-child(6) {
-            animation-delay: .30s;
-        }
+.shirt-card:hover{
+    border-color:rgba(66,217,255,.55);
 
-        .shirt-card:nth-child(7) {
-            animation-delay: .35s;
-        }
+    transform:translateY(-8px);
 
-        .shirt-card:nth-child(8) {
-            animation-delay: .40s;
-        }
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.45),
+        0 0 30px rgba(66,217,255,.08);
+}
 
-        .shirt-card:nth-child(9) {
-            animation-delay: .45s;
-        }
+/* IMAGE */
 
-        .shirt-card:nth-child(10) {
-            animation-delay: .50s;
-        }
+.image-wrap{
+    width:100%;
 
-        .shirt-card:nth-child(11) {
-            animation-delay: .55s;
-        }
+    aspect-ratio:3 / 4;
 
-        .shirt-card:nth-child(12) {
-            animation-delay: .60s;
-        }
+    overflow:hidden;
 
-        .shirt-card:nth-child(13) {
-            animation-delay: .65s;
-        }
+    border-radius:12px;
 
-        .shirt-card:nth-child(14) {
-            animation-delay: .70s;
-        }
+    background:#080d18;
 
-        .shirt-card:nth-child(15) {
-            animation-delay: .75s;
-        }
+    position:relative;
+}
 
-        .shirt-card:nth-child(16) {
-            animation-delay: .80s;
-        }
+.image-wrap img{
+    width:100%;
+    height:100%;
 
-        .shirt-card:nth-child(17) {
-            animation-delay: .85s;
-        }
+    display:block;
 
-        .shirt-card:nth-child(18) {
-            animation-delay: .90s;
-        }
+    object-fit:cover;
 
-        .shirt-card:nth-child(19) {
-            animation-delay: .95s;
-        }
+    transition:.6s;
+}
 
-        .shirt-card:nth-child(20) {
-            animation-delay: 1s;
-        }
+.shirt-card:hover img{
+    transform:scale(1.035);
+}
 
-        @keyframes cardReveal {
+/* OVERLAY */
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+.view-overlay{
+    position:absolute;
 
-        }
+    inset:0;
 
-        .shirt-card:hover {
-            border-color:
-                rgba(66,217,255,0.55);
+    display:flex;
 
-            transform:
-                translateY(-8px);
+    align-items:center;
+    justify-content:center;
 
-            box-shadow:
-                0 20px 50px rgba(0,0,0,0.45),
-                0 0 30px rgba(66,217,255,0.08);
-        }
+    background:rgba(0,0,0,.35);
 
-        /* =========================
-           IMAGE
-        ========================== */
+    opacity:0;
 
-        .image-wrap {
-            position: relative;
+    transition:.3s;
+}
 
-            width: 100%;
+.shirt-card:hover .view-overlay{
+    opacity:1;
+}
 
-            aspect-ratio: 3 / 4;
+.view-text{
+    padding:10px 18px;
 
-            overflow: hidden;
+    border-radius:30px;
 
-            border-radius: 12px;
+    background:rgba(3,7,18,.9);
 
-            background: #080d18;
-        }
+    border:1px solid rgba(66,217,255,.7);
 
-        .image-wrap img {
-            width: 100%;
-            height: 100%;
+    color:white;
 
-            display: block;
+    font-size:.85rem;
+    font-weight:600;
+}
 
-            object-fit: cover;
+/* CARD INFO */
 
-            transition:
-                transform 0.6s ease;
-        }
+.shirt-info{
+    padding:17px 10px 12px;
+}
 
-        .shirt-card:hover img {
-            transform:
-                scale(1.035);
-        }
+.number{
+    color:var(--blue);
 
-        /* =========================
-           VIEW OVERLAY
-        ========================== */
+    font-size:.7rem;
+    font-weight:700;
 
-        .view-overlay {
-            position: absolute;
+    letter-spacing:2px;
 
-            inset: 0;
+    margin-bottom:7px;
+}
 
-            display: flex;
+.shirt-info h2{
+    font-family:'Orbitron',sans-serif;
 
-            align-items: center;
-            justify-content: center;
+    font-size:1rem;
 
-            background:
-                rgba(0,0,0,0.35);
+    font-weight:600;
+}
 
-            opacity: 0;
+/* MODAL */
 
-            transition: 0.3s ease;
-        }
+.modal{
+    position:fixed;
 
-        .shirt-card:hover
-        .view-overlay {
-            opacity: 1;
-        }
+    inset:0;
 
-        .view-text {
-            padding: 10px 18px;
+    background:rgba(0,0,0,.9);
 
-            border-radius: 30px;
+    display:flex;
 
-            background:
-                rgba(3,7,18,0.85);
+    align-items:center;
+    justify-content:center;
 
-            border:
-                1px solid rgba(66,217,255,0.7);
+    padding:20px;
 
-            color: white;
+    opacity:0;
+    visibility:hidden;
 
-            font-size: 0.85rem;
+    transition:.3s;
 
-            font-weight: 600;
-        }
+    z-index:100;
+}
 
-        /* =========================
-           CARD INFO
-        ========================== */
+.modal.active{
+    opacity:1;
+    visibility:visible;
+}
 
-        .shirt-info {
-            padding:
-                18px 10px 12px;
-        }
+.modal-content{
+    max-width:600px;
+    max-height:92vh;
 
-        .number {
-            color: var(--blue);
+    width:100%;
 
-            font-size: 0.75rem;
+    display:flex;
+    justify-content:center;
+}
 
-            font-weight: 700;
+.modal-content img{
+    max-width:100%;
+    max-height:88vh;
 
-            letter-spacing: 2px;
+    width:auto;
+    height:auto;
 
-            margin-bottom: 7px;
-        }
+    object-fit:contain;
 
-        .shirt-info h2 {
-            font-family: 'Orbitron', sans-serif;
+    border-radius:14px;
 
-            font-size: 1rem;
+    box-shadow:0 25px 80px rgba(0,0,0,.7);
+}
 
-            font-weight: 600;
-        }
+.close-btn{
+    position:fixed;
 
-        /* =========================
-           MODAL
-        ========================== */
+    top:25px;
+    right:30px;
 
-        .modal {
-            position: fixed;
+    width:45px;
+    height:45px;
 
-            inset: 0;
+    border:1px solid rgba(255,255,255,.25);
 
-            background:
-                rgba(0,0,0,0.88);
+    border-radius:50%;
 
-            display: flex;
+    background:rgba(10,18,34,.95);
 
-            align-items: center;
-            justify-content: center;
+    color:white;
 
-            padding: 30px;
+    font-size:1.5rem;
 
-            opacity: 0;
+    cursor:pointer;
 
-            visibility: hidden;
+    z-index:110;
+}
 
-            transition: 0.3s ease;
+.close-btn:hover{
+    background:var(--blue);
+    color:#03101b;
+}
 
-            z-index: 100;
-        }
+/* FOOTER */
 
-        .modal.active {
-            opacity: 1;
-            visibility: visible;
-        }
+footer{
+    text-align:center;
 
-        .modal-content {
-            position: relative;
+    padding:35px 20px;
 
-            max-width: 600px;
+    border-top:1px solid rgba(255,255,255,.08);
 
-            max-height: 92vh;
+    color:var(--muted);
 
-            width: 100%;
+    font-size:.85rem;
+}
 
-            display: flex;
+footer span{
+    color:var(--blue);
+}
 
-            justify-content: center;
-        }
+/* TABLET */
 
-        .modal-content img {
-            max-width: 100%;
+@media(max-width:900px){
 
-            max-height: 88vh;
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
 
-            width: auto;
-            height: auto;
+}
 
-            object-fit: contain;
+/* MOBILE */
 
-            border-radius: 14px;
+@media(max-width:600px){
 
-            box-shadow:
-                0 25px 80px rgba(0,0,0,0.7);
-        }
+    header{
+        padding:20px 5%;
+    }
 
-        /* =========================
-           CLOSE BUTTON
-        ========================== */
+    .logo{
+        font-size:1rem;
+    }
 
-        .close-btn {
-            position: fixed;
+    .back-btn{
+        padding:9px 14px;
+        font-size:.75rem;
+    }
 
-            top: 25px;
-            right: 30px;
+    .hero{
+        padding:65px 20px 45px;
+    }
 
-            width: 45px;
-            height: 45px;
+    .hero h1{
+        font-size:2.2rem;
+    }
 
-            border:
-                1px solid rgba(255,255,255,0.25);
+    .gallery{
+        width:92%;
 
-            border-radius: 50%;
+        grid-template-columns:repeat(2,1fr);
 
-            background:
-                rgba(10,18,34,0.9);
+        gap:12px;
+    }
 
-            color: white;
+    .shirt-card{
+        padding:6px;
+        border-radius:12px;
+    }
 
-            font-size: 1.5rem;
+    .image-wrap{
+        border-radius:8px;
+    }
 
-            cursor: pointer;
+    .shirt-info{
+        padding:10px 5px 7px;
+    }
 
-            z-index: 110;
-        }
+    .shirt-info h2{
+        font-size:.7rem;
+    }
 
-        .close-btn:hover {
-            background: var(--blue);
+    .number{
+        font-size:.6rem;
+        margin-bottom:4px;
+    }
 
-            color: #03101b;
-        }
+    .view-overlay{
+        display:none;
+    }
 
-        /* =========================
-           FOOTER
-        ========================== */
+    .modal{
+        padding:15px;
+    }
 
-        footer {
-            text-align: center;
+    .close-btn{
+        top:15px;
+        right:15px;
+    }
 
-            padding: 35px 20px;
+}
 
-            border-top:
-                1px solid rgba(255,255,255,0.08);
-
-            color: var(--muted);
-
-            font-size: 0.85rem;
-        }
-
-        footer span {
-            color: var(--blue);
-        }
-
-        /* =========================
-           TABLET
-        ========================== */
-
-        @media (max-width: 900px) {
-
-            .gallery {
-                grid-template-columns:
-                    repeat(2, 1fr);
-
-                gap: 20px;
-            }
-
-        }
-
-        /* =========================
-           MOBILE
-        ========================== */
-
-        @media (max-width: 600px) {
-
-            header {
-                padding: 20px 5%;
-            }
-
-            .logo {
-                font-size: 1rem;
-            }
-
-            .back-btn {
-                padding: 9px 14px;
-
-                font-size: 0.78rem;
-            }
-
-            .hero {
-                padding:
-                    65px 20px 45px;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .gallery {
-                width: 92%;
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-
-                gap: 12px;
-            }
-
-            .shirt-card {
-                padding: 6px;
-
-                border-radius: 12px;
-            }
-
-            .image-wrap {
-                border-radius: 8px;
-            }
-
-            .shirt-info {
-                padding:
-                    11px 5px 7px;
-            }
-
-            .shirt-info h2 {
-                font-size: 0.72rem;
-            }
-
-            .number {
-                font-size: 0.62rem;
-
-                margin-bottom: 4px;
-            }
-
-            .view-overlay {
-                display: none;
-            }
-
-            .modal {
-                padding: 15px;
-            }
-
-            .close-btn {
-                top: 15px;
-                right: 15px;
-            }
-
-        }
-
-    </style>
+</style>
 </head>
 
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
 
-    <header>
+<!-- HEADER -->
 
-        <div class="logo">
-            SPLATTER <span>GRAPHICS</span>
-        </div>
+<header>
 
-        <a
-            href="index.html"
-            class="back-btn"
-        >
-            ← Back to Portfolio
-        </a>
+    <div class="logo">
+        SPLATTER <span>GRAPHICS</span>
+    </div>
 
-    </header>
+    <a href="index.html" class="back-btn">
+        ← Back to Portfolio
+    </a>
+
+</header>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+<!-- HERO -->
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="small-label">
-            T-SHIRT COLLECTION
-        </div>
+    <div class="small-label">
+        T-SHIRT COLLECTION
+    </div>
 
-        <h1>
-            T-Shirt <span>Designs</span>
-        </h1>
+    <h1>
+        T-Shirt <span>Designs</span>
+    </h1>
 
-        <p>
-            A collection of custom T-shirt designs
-            created by Splatter Graphics.
-            Creative typography, concepts and
-            visual identities made for print.
-        </p>
+    <p>
+        A collection of custom T-shirt designs
+        created by Splatter Graphics.
+        Creative typography, concepts and
+        visual identities made for print.
+    </p>
 
-    </section>
+</section>
 
 
-    <!-- =========================
-         GALLERY
-    ========================== -->
+<!-- GALLERY -->
 
-    <main class="gallery">
+<main class="gallery">
 
 
-        <!-- 01 -->
+<!-- 01 NAGAVALLI -->
 
-        <div
-            class="shirt-card"
-            onclick="openModal(this)"
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/nagavally.png.png"
+            alt="Nagavalli T-Shirt Design"
         >
 
-            <div class="image-wrap">
-
-                <img
-                    src="T-Shirts/nagavally.png.png"
-                    alt="Nagavalli T-Shirt Design"
-                >
-
-                <div class="view-overlay">
-                    <div class="view-text">
-                        View Design
-                    </div>
-                </div>
-
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
             </div>
-
-            <div class="shirt-info">
-
-                <div class="number">
-                    01
-                </div>
-
-                <h2>
-                    Nagavalli
-                </h2>
-
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 02 -->
+    <div class="shirt-info">
 
-        <div
-            class="shirt-card"
-            onclick="openModal(this)"
+        <div class="number">01</div>
+
+        <h2>Nagavalli</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 02 ONAM -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/onam.png.png"
+            alt="Onam T-Shirt Design"
         >
 
-            <div class="image-wrap">
-
-                <img
-                    src="T-Shirts/onam.png.png"
-                    alt="Onam T-Shirt Design"
-                >
-
-                <div class="view-overlay">
-                    <div class="view-text">
-                        View Design
-                    </div>
-                </div>
-
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
             </div>
-
-            <div class="shirt-info">
-
-                <div class="number">
-                    02
-                </div>
-
-                <h2>
-                    Onam
-                </h2>
-
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 03 -->
+    <div class="shirt-info">
 
-        <div
-            class="shirt-card"
-            onclick="openModal(this)"
+        <div class="number">02</div>
+
+        <h2>Onam</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 03 CRUZADOS -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/cruzados.png.png"
+            alt="Cruzados T-Shirt Design"
         >
 
-            <div class="image-wrap">
-
-                <img
-                    src="T-Shirts/cruzados.png.png"
-                    alt="Cruzados T-Shirt Design"
-                >
-
-                <div class="view-overlay">
-                    <div class="view-text">
-                        View Design
-                    </div>
-                </div>
-
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
             </div>
-
-            <div class="shirt-info">
-
-                <div class="number">
-                    03
-                </div>
-
-                <h2>
-                    Cruzados
-                </h2>
-
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 04 -->
+    <div class="shirt-info">
 
-        <div
-            class="shirt-card"
-            onclick="openModal(this)"
+        <div class="number">03</div>
+
+        <h2>Cruzados</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 04 GOD FATHER -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/the-god-father.png.png"
+            alt="God Father T-Shirt Design"
         >
 
-            <div class="image-wrap">
-
-                <img
-                    src="T-Shirts/the-god-father.png.png"
-                    alt="God Father T-Shirt Design"
-                >
-
-                <div class="view-overlay">
-                    <div class="view-text">
-                        View Design
-                    </div>
-                </div>
-
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
             </div>
-
-            <div class="shirt-info">
-
-                <div class="number">
-                    04
-                </div>
-
-                <h2>
-                    God Father
-                </h2>
-
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 05 -->
+    <div class="shirt-info">
 
-        <div
-            class="shirt-card"
-            onclick="openModal(this)"
+        <div class="number">04</div>
+
+        <h2>God Father</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 05 NEELAKANDANTE PAATTALAM -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/mangalashery-neelakandan.png.png"
+            alt="Neelakandante Paattalam T-Shirt Design"
         >
 
-            <div class="image-wrap">
-
-                <img
-                    src="T-Shirts/mangalashery-neelakandan.png.png"
-                    alt="Neelakandante Paattalam T-Shirt Design"
-                >
-
-                <div class="view-overlay">
-                    <div class="view-text">
-                        View Design
-                    </div>
-                </div>
-
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
             </div>
-
-            <div class="shirt-info">
-
-                <div class="number">
-                    05
-                </div>
-
-                <h2>
-                    Neelakandante Paattalam
-                </h2>
-
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 06 -->
+    <div class="shirt-info">
 
-        <div
-            class="shirt-card"
-            onclick="openModal(this)"
+        <div class="number">05</div>
+
+        <h2>Neelakandante Paattalam</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 06 I NEED MORE SPACE -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/i-need-more-space.png.png"
+            alt="I Need More Space T-Shirt Design"
         >
 
-            <div class="image-wrap">
-
-                <img
-                    src="T-Shirts/i-need-more-space.png.png"
-                    alt="I Need More Space T-Shirt Design"
-                >
-
-                <div class="view-overlay">
-                    <div class="view-text">
-                        View Design
-                    </div>
-                </div>
-
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
             </div>
-
-            <div class="shirt-info">
-
-                <div class="number">
-                    06
-                </div>
-
-                <h2>
-                    I Need More Space
-                </h2>
-
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 07 -->
+    <div class="shirt-info">
 
-        <div
-            class="shirt-card"
-            onclick="openModal(this)"
+        <div class="number">06</div>
+
+        <h2>I Need More Space</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 07 ONLY YOU -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/only-you.png.png"
+            alt="Only You T-Shirt Design"
         >
 
-            <div class="image-wrap">
-
-                <img
-                    src="T-Shirts/only-you.png.png"
-                    alt="Only You T-Shirt Design"
-                >
-
-                <div class="view-overlay">
-                    <div class="view-text">
-                        View Design
-                    </div>
-                </div>
-
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
             </div>
-
-            <div class="shirt-info">
-
-                <div class="number">
-                    07
-                </div>
-
-                <h2>
-                    Only You
-                </h2>
-
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 08 -->
+    <div class="shirt-info">
 
-        <div
-            class="shirt-card"
-            onclick="openModal(this)"
+        <div class="number">07</div>
+
+        <h2>Only You</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 08 WANNA BE YOURS -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/wanna-be-yours.png.png"
+            alt="Wanna Be Yours T-Shirt Design"
         >
 
-            <div class="image-wrap">
-
-                <img
-                    src="T-Shirts/wanna-be-yours.png.png"
-                    alt="Wanna Be Yours T-Shirt Design"
-                >
-
-                <div class="view-overlay">
-                    <div class="view-text">
-                        View Design
-                    </div>
-                </div>
-
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
             </div>
-
-            <div class="shirt-info">
-
-                <div class="number">
-                    08
-                </div>
-
-                <h2>
-                    Wanna Be Yours
-                </h2>
-
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 09 -->
+    <div class="shirt-info">
 
-        <div
-            class="shirt-card"
-            onclick="openModal(this)"
+        <div class="number">08</div>
+
+        <h2>Wanna Be Yours</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 09 NEVER LUCK -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/never-luck.png.png"
+            alt="Never Luck T-Shirt Design"
         >
 
-            <div class="image-wrap">
-
-                <img
-                    src="T-Shirts/never-luck.png.png"
-                    alt="Never Luck T-Shirt Design"
-                >
-
-                <div class="view-overlay">
-                    <div class="view-text">
-                        View Design
-                    </div>
-                </div>
-
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
             </div>
-
-            <div class="shirt-info">
-
-                <div class="number">
-                    09
-                </div>
-
-                <h2>
-                    Never Luck
-                </h2>
-
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 10 -->
+    <div class="shirt-info">
 
-        <div
-            class="shirt-card"
-            onclick="openModal(this)"
+        <div class="number">09</div>
+
+        <h2>Never Luck</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 10 SPIDER MAN -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/spider-man.jpg.png"
+            alt="Spider Man T-Shirt Design"
         >
 
-            <div class="image-wrap">
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">10</div>
+
+        <h2>Spider Man</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 11 PAYIPPADAN -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/payippadans.png.png"
+            alt="PAYIPPADAN T-Shirt Design"
+        >
+
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">11</div>
+
+        <h2>PAYIPPADAN</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 12 WITH HER -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/with-her.png.png"
+            alt="With Her T-Shirt Design"
+        >
+
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">12</div>
+
+        <h2>With Her</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 13 LAHEL VAKKACHAN -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/lahel-vakkachan.png.png"
+            alt="Lahel Vakkachan T-Shirt Design"
+        >
+
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">13</div>
+
+        <h2>Lahel Vakkachan</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 14 SAGAR ALIAS JACKY -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/sagar-alias-jacky.jpg.png"
+            alt="Sagar Alias Jacky T-Shirt Design"
+        >
+
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">14</div>
+
+        <h2>Sagar ALIAS JACKY</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 15 DODGE -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/dodge.jpg.jpg"
+            alt="Dodge T-Shirt Design"
+        >
+
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">15</div>
+
+        <h2>Dodge</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 16 INSPECTOR NADESHAN -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/mani.jpg.png"
+            alt="Inspector NADESHAN T-Shirt Design"
+        >
+
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">16</div>
+
+        <h2>Inspector NADESHAN</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 17 STAY STRONG -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/cant.png.png"
+            alt="Stay Strong T-Shirt Design"
+        >
+
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">17</div>
+
+        <h2>Stay Strong</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 18 DREAM -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/dream.png.png"
+            alt="Dream T-Shirt Design"
+        >
+
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">18</div>
+
+        <h2>Dream</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 19 KEEP MOVING -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/keep-moving.png.png"
+            alt="Keep Moving T-Shirt Design"
+        >
+
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">19</div>
+
+        <h2>Keep Moving</h2>
+
+    </div>
+
+</div>
+
+
+<!-- 20 MONEY -->
+
+<div class="shirt-card" onclick="openModal(this)">
+
+    <div class="image-wrap">
+
+        <img
+            src="T-Shirts/money.png.png"
+            alt="Money T-Shirt Design"
+        >
+
+        <div class="view-overlay">
+            <div class="view-text">
+                View Design
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shirt-info">
+
+        <div class="number">20</div>
+
+        <h2>Money</h2>
+
+    </div>
+
+</div>
+
+
+</main>
+
+
+<!-- MODAL -->
+
+<div
+    class="modal"
+    id="imageModal"
+    onclick="closeModal(event)"
+>
+
+    <button
+        class="close-btn"
+        onclick="closeModal()"
+    >
+        ×
+    </button>
+
+    <div class="modal-content">
+
+        <img
+            id="modalImage"
+            src=""
+            alt="T-Shirt Design Preview"
+        >
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026
+    <span>Splatter Graphics</span>
+    — All Rights Reserved.
+
+</footer>
+
+
+<script>
+
+function openModal(card){
+
+    const image = card.querySelector("img");
+
+    document.getElementById("modalImage").src = image.src;
+
+    document.getElementById("imageModal").classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeModal(event){
+
+    if(
+        event &&
+        event.target &&
+        event.target.closest(".modal-content")
+    ){
+        return;
+    }
+
+    document.getElementById("imageModal").classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key === "Escape"){
+        closeModal();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
